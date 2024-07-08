@@ -5765,7 +5765,7 @@ public class TextView : View
 
         if (cell.ColorScheme is { } && colWithColor > -1 && colWithoutColor < lineToSet.Count && lineToSet [colWithoutColor].ColorScheme is null)
         {
-            while (lineToSet [colWithoutColor].ColorScheme is null)
+            while (colWithoutColor > -1 && lineToSet [colWithoutColor].ColorScheme is null)
             {
                 lineToSet [colWithoutColor].ColorScheme = cell.ColorScheme;
                 colWithoutColor--;

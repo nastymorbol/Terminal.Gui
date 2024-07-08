@@ -934,7 +934,7 @@ public static partial class Application
                 OverlappedTop?.OnDeactivate (state.Toplevel);
                 state.Toplevel = Current;
                 OverlappedTop?.OnActivate (state.Toplevel);
-                Top.SetSubViewNeedsDisplay ();
+                Top?.SetSubViewNeedsDisplay ();
                 Refresh ();
             }
         }
